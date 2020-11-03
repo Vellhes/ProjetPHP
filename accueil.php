@@ -16,12 +16,12 @@ session_start();
 </head>
 <body>
     <header>
-    <a href=accueil.php><div class="bouton"><img src="home.png" style="width:20px; height:20px" align="left"> 
+    <a href=accueil.php><div class="bouton"><img src="images/home.png" style="width:20px; height:20px" align="left"> 
     </div></a>
     <div>
     <?php
     if($id_redacteur != 0){
-        echo '<a href=deco.php><div class="bouton"><img src="deconnexion.png" style="width:20px; height:20px" align="left"> 
+        echo '<a href=deco.php><div class="bouton"><img src="images/deconnexion.png" style="width:20px; height:20px" align="left"> 
         </div></a>';
         echo "Redacteur : ".$nom." ".$prenom;
     }
