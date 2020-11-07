@@ -17,7 +17,7 @@ $_SESSION['erreur']="";
 		<link rel="icon" href="images/logo.png"/>
 		<meta charset="utf-8" />
 		<title>MOSELLE INFO</title>
-        <link rel="stylesheet" href="newsstylee.css" />
+        <link rel="stylesheet" href="style/newsstyle.css" />
         <meta name="viewport"  content="width=max-device-width, initial-scale=1" />
 	</head>
 <body>

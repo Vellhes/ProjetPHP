@@ -43,7 +43,7 @@ session_start();
 <head>
 		<meta charset="utf-8" />
 		<title>MOSELLE INFO</title>
-        <link rel="stylesheet" href="connexionstyle.css" />
+        <link rel="stylesheet" href="style/connexionstyle.css" />
         <link rel="icon" href="images/logo.png"/>
         <meta name="viewport"  content="width=max-device-width, initial-scale=1" />
 	</head>

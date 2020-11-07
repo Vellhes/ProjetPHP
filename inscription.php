@@ -58,7 +58,7 @@
 <html>
 <head>
 <title>MOSELLE INFO</title>
-<link rel="stylesheet" href="inscriptionstyle.css" />
+<link rel="stylesheet" href="style/inscriptionstyle.css" />
 <link rel="icon" href="images/logo.png"/>
 </head>
 <body>

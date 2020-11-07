@@ -38,7 +38,7 @@
 <html>
 <head>
 <link rel="icon" href="images/logo.png"/>
-<link rel="stylesheet" href="redactionstyle.css" />
+<link rel="stylesheet" href="style/redactionstyle.css" />
 <meta charset="UTF-8">
 <title>MOSELLE INFO</title>
 </head>

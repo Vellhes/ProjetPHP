@@ -13,7 +13,7 @@ session_start();
 <html>
 <head>
 <title>MOSELLE INFO</title>
-<link rel="stylesheet" href="accueilstylee.css" />
+<link rel="stylesheet" href="style/accueilstyle.css" />
 <link rel="icon" href="images/logo.png"/>
 </head>
 <body>
