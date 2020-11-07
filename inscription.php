@@ -57,18 +57,39 @@
 
 <html>
 <head>
-<title>Inscription</title>
-<head>
+<title>MOSELLE INFO</title>
+<link rel="stylesheet" href="inscriptionstyle.css" />
+<link rel="icon" href="images/logo.png"/>
+</head>
 <body>
+<header>
+    <a href=accueil.php><div class="bouton"><img src="images/home.png" style="width:20px; height:20px" align="left"> 
+    </div></a>
+    <div>
+
+    <?php
+    if($id_redacteur != 0){
+        echo '<a href=deco.php><div class="bouton"><img src="images/deconnexion.png" style="width:20px; height:20px" align="left"> 
+        </div></a>';
+        echo "Redacteur : ".$nom." ".$prenom;
+    }
+    else{
+        echo"Non connecté";
+    }
+        
+    ?>
+    </div>
+    </header>
 <center><h1>Inscription</h1>
+    <article id="back">
     <form method="post" action="inscription.php">
                 Nom : <input type="text" size="20" name="nom" value="<?php if(isset($nom)) {echo $nom;} ?>"/><br/><br/>
                 Prénom : <input type="text" size="20" name="prenom" value="<?php if(isset($prenom)) {echo $prenom;} ?>"><br/><br/>
                 e-mail : <input type="text" size="20" name="mail" value="<?php if(isset($mail)) {echo $mail;} ?>"><br/><br/>
                 Mot de passe : <input type="password" size="20" name="mdp"><br/><br/>
                 Valider le mot de passe : <input type="password" size="20" name="mdp2"><br/><br/>
-    <input type="submit" value="Valider" name="Valider"><br/>
-    Déja inscrit ? Cliquez <a href="connexion.php">ici</a> pour vous connecter.
+    <input type="submit" class ="brille" value="Valider" name="Valider"><br/>
+    Déja inscrit ? <a href="connexion.php">Cliquez ici</a> pour vous connecter.
     </form>
     <?php
     if(isset($erreur)){
@@ -76,5 +97,6 @@
     }
     ?>
     </center>
+    </article>
 </body>
 </html>

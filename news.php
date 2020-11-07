@@ -14,16 +14,18 @@ $_SESSION['erreur']="";
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="icon" href="images/logo.png"/>
 		<meta charset="utf-8" />
 		<title>MOSELLE INFO</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="newsstylee.css" />
         <meta name="viewport"  content="width=max-device-width, initial-scale=1" />
 	</head>
 <body>
 <header>
-    <a href=accueil.php><div class="bouton"><img src="images/home.png" style="width:20px; height:20px" align="left"> 
+    <a href=accueil.php><div class="bouton"><img src="images/home.png" style="width:20px; height:20px" align="left" class="menu"> 
     </div></a>
     <div>
+
     <?php
     if($id_redacteur != 0){
         echo '<a href=deco.php><div class="bouton"><img src="images/deconnexion.png" style="width:20px; height:20px" align="left"> 
@@ -37,20 +39,20 @@ $_SESSION['erreur']="";
     ?>
     </div>
 	</header>
-		<h1>MOSELLE INFO</h1><br/><br/>
 		<h1>Choisissez un thème</h1>
-		<form method="post" action="news.php">
-		<center><select name="theme">
+		<center>
+		<form method="post"  action="news.php">
+		<select name="theme">
             <?php
                 $theme = $SQL -> query("SELECT * from theme");
                 while($row=$theme->fetch()){
-                    echo"<option value=".$row['idtheme'].">".$row['description']."</option>";
+                    echo"<option value=".$row['idtheme']."> ".$row['description']."</option>";
                 }
             ?>
 		</select><br/><br/>
-		<input type="submit" value="Valider" name="Valider"><br/><br/>
-		</center>
-	<section id="gugu">
+		<input type="submit" class="brille" value="Valider" name="Valider"><br/><br/>
+	</center>
+	<section id="val">
 		<?php
 			if(isset($_POST['Valider'])){
 				$idtheme = intval($_POST['theme']);
@@ -77,14 +79,4 @@ $_SESSION['erreur']="";
 
 </body>
 </html>
-<style>
 
-header{
-    margin : 0;
-    padding : 10;
-    color : white;
-    background-color : black;
-}
-
-
-</style>

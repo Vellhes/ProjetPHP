@@ -1,5 +1,4 @@
-<?php
-
+ <?php
 session_start();
 
         $id_redacteur = $_SESSION['idredacteur'];
@@ -42,23 +41,52 @@ session_start();
 ?>
 <html>
 <head>
+		<meta charset="utf-8" />
+		<title>MOSELLE INFO</title>
+        <link rel="stylesheet" href="connexionstyle.css" />
+        <link rel="icon" href="images/logo.png"/>
+        <meta name="viewport"  content="width=max-device-width, initial-scale=1" />
+	</head>
+<body>
+<header>
+    <a href=accueil.php><div class="bouton"><img src="images/home.png" style="width:20px; height:20px" align="left"> 
+    </div></a>
+    <div>
+
+    <?php
+    if($id_redacteur != 0){
+        echo '<a href=deco.php><div class="bouton"><img src="images/deconnexion.png" style="width:20px; height:20px" align="left"> 
+        </div></a>';
+        echo "Redacteur : ".$nom." ".$prenom;
+    }
+    else{
+        echo"Non connecté";
+    }
+        
+    ?>
+    </div>
+    </header>
 <meta charset="UTF-8">
 <title>Connexion</title>
-<head>
 <center>
-<body>
+
     <h1>Connexion</h1>
+    <div id="back">
     <form method="post" action="">
-        e-mail : <input type="email" size="20" name="mail" value="<?php if(isset($mail)) {echo $mail;} ?>"><br/><br/>
+        Adresse mail : <input type="email" size="20" name="mail" value="<?php if(isset($mail)) {echo $mail;} ?>"><br/><br/>
         Mot de passe : <input type="password" size="20" name="mdp"><br/><br/>
-        <input type="submit" value="Valider" name="Valider"><br/>  
+        <input type="submit" class="brille" value="Valider" name="Valider"><br/>  
     </form>
-    Vous n'êtes pas inscrit ? Cliquez <a href="inscription.php">ici</a>
+    <article>Vous n'êtes pas encore inscrit ? <a href="inscription.php">Cliquez ici</a></article>
     <?php
     if(isset($erreur)){
         echo '<font color=red>'.$erreur.'</font>';
     }
     ?>
-</body>
+    
 </center>
+</div>
+</body>
 </html>
+<style>
+

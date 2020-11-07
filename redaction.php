@@ -37,8 +37,10 @@
 ?>
 <html>
 <head>
+<link rel="icon" href="images/logo.png"/>
+<link rel="stylesheet" href="redactionstyle.css" />
 <meta charset="UTF-8">
-<title>Rédaction</title>
+<title>MOSELLE INFO</title>
 </head>
 <body>
     <header>
@@ -77,7 +79,7 @@
             ?>
         </select><br/><br/>
         <textarea name="textnews" rows="100" cols="100"></textarea><br/><br/>
-        <input type="submit" value="Publier" name="Publier"><br/>
+        <input type="submit" class="brille" value="Publier" name="Publier"><br/>
     </form>
     </div>
 </body> 

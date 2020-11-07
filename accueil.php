@@ -12,50 +12,50 @@ session_start();
 
 <html>
 <head>
-<title>Accueil</title>
+<title>MOSELLE INFO</title>
+<link rel="stylesheet" href="accueilstylee.css" />
+<link rel="icon" href="images/logo.png"/>
 </head>
 <body>
     <header>
-    <a href=accueil.php><div class="bouton"><img src="images/home.png" style="width:20px; height:20px" align="left"> 
-    </div></a>
+    <a href=accueil.php><div class="bouton"><img src="images/home.png" alt="accueil" style="width:23px ; height:23px" align="left" ></a>
+    <a href=connexion.php style="float: right" id="con"> Connexion   </a> 
+    <a style="float: right" href=inscription.php id="iscri"> Inscription &nbsp &nbsp </a>
+
+    </div>
     <div>
+    
     <?php
     if($id_redacteur != 0){
-        echo '<a href=deco.php><div class="bouton"><img src="images/deconnexion.png" style="width:20px; height:20px" align="left"> 
+        echo '<a href=deco.php><div class="bouton"><img src="images/deconnexion.png" alt="deconnexion" style="width:23px ; height:23px" align="left" > 
         </div></a>';
         echo "Redacteur : ".$nom." ".$prenom;
     }
     else{
         echo"Non connecté";
     }
-        
     ?>
     </div>
     </header>
+    <h1>MOSELLE INFO</h1>
+    <div id="back">
+    <article id="bienvenue">
+    <p>Bienvenue sur le site des actualités de Moselle.</P>
+    </article>
+    <article>
     <div id="accueil">
-    <h1>Accueil</h1>
-    <a href=news.php>News</a><br/><br/>
-    <a href=inscription.php>Inscription</a><br/><br/>
-    <a href=connexion.php>Connexion</a><br/><br/>
-    <a href=redaction.php>Nouvel article</a><br/><br/>
+    <a href=news.php> Actualités </a><br/><br/>
+    <a href=redaction.php> Ecrire un nouvel article </a><br/><br/>
     <?php
-        echo '<font color=red>'.$erreur.'</font>';
+        echo '<p class="erreur">'.$erreur.'</p>';
     ?>
+    <br/><br/><br/><br/>
+    </article>
+    <article id=pres>
+        <p>Ce site vous est présenté par SCANU Antoine et BEHR Malo, étudiants en informatique de l'université de Metz,
+           dans le cadre de leurs apprentissage du développement en web avancé</p>
+    </article>
     </div>
-</body>
+    </div>
+    </body>
 </html>
-
-<style>
-
-header{
-    margin : 0;
-    padding : 10;
-    color : white;
-    background-color : black;
-}
-
-#accueil{
-    text-align : center;
-}
-
-</style>
